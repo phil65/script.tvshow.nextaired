@@ -480,6 +480,10 @@ class NextAired:
                 prefix = 'NextAired.'
             else:
                 prefix = 'NextAired.' + str(self.count) + '.'
+                if __addon__.getSetting( "ShowAllTVShowsOnHome" ) == 'true':
+                    label.setProperty('NextAired.' + "ShowAllTVShows", "true")
+                else:
+                    label.setProperty('NextAired.' + "ShowAllTVShows", "false")
             label.setProperty(prefix + "Label", item.get("localname", ""))
             label.setProperty(prefix + "Thumb", item.get("thumbnail", ""))
         else:
