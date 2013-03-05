@@ -401,7 +401,7 @@ class NextAired:
             self.WINDOW.clearProperty("NextAired.%d.Label" % ( count + 1, ))
         self.count = 0
         for current_show in self.nextlist:
-            if current_show.get("RFC3339" , "" )[:10] == self.datestr:
+            if ((current_show.get("RFC3339" , "" )[:10] == self.datestr) or (__addon__.getSetting( "ShowAllTVShowsOnHome" ) == 'true')):
                 self.count += 1
                 self.set_labels('windowpropertytoday', current_show)
 

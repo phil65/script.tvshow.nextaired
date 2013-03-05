@@ -1,3 +1,6 @@
+v5.0.6
+- added script option to set properties for all tvshows, not only today´s ones.
+
 v5.0.5
 - added characterart property
 
